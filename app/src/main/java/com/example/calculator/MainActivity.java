@@ -114,10 +114,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     default:
                         calculate.appendNum(n);
-
-
                 }
-                Toast.makeText(MainActivity.this, n.toString(), Toast.LENGTH_LONG).show();
+                answerText.setText(calculate.getAnswer());
+                formulaText.setText(calculate.toString());
+//                Toast.makeText(MainActivity.this, n.toString(), Toast.LENGTH_LONG).show();
             }
         });
     }

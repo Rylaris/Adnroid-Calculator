@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import java.text.DecimalFormat;
 import java.util.Stack;
 
 /**
@@ -132,6 +133,9 @@ public class Calculate {
      * @return 当前算式的计算结果
      */
     public String getAnswer() {
+        if (formula.isEmpty()) {
+            return "";
+        }
         if (answer.charAt(answer.length() - 1) == '0' && answer.charAt(answer.length() - 2) == '.') {
             return answer.substring(0, answer.length() - 2);
         } else {
@@ -145,6 +149,9 @@ public class Calculate {
     private void updateAnswer() {
         service.setArithmetic(formulaToString());
         answer = service.getResult().toString();
+        if (answer.length() >= 2 && answer.charAt(answer.length() - 1) == '0' && answer.charAt(answer.length() - 2) == '.') {
+            answer = answer.substring(0, answer.length() - 2);
+        }
         System.out.println("Current answer is " + answer);
     }
 
@@ -198,5 +205,15 @@ public class Calculate {
     private boolean isOperator(int button) {
         return button == ButtonState.PLUS || button == ButtonState.MINUS
                 || button == ButtonState.MUTIPLY || button == ButtonState.DIVIDE;
+    }
+
+    @Override
+    public String toString() {
+        Stack<Character> temp = (Stack<Character>) formula.clone();
+        StringBuilder result = new StringBuilder();
+        while (!temp.isEmpty()) {
+            result.append(temp.pop());
+        }
+        return result.reverse().toString();
     }
 }
