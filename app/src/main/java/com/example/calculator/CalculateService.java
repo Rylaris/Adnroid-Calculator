@@ -131,7 +131,7 @@ class CalculateService {
         }
         opnd.push(temp);
     }
-    
+
     /**
      * 判断操作符的关系
      *

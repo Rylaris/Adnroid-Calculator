@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
             mutiplyButton, divideButton, equalsButton, percentButton, radicalButton, deleteButton,
             clearButton;
 
+    Calculate calculate = new Calculate();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,12 +83,37 @@ public class MainActivity extends AppCompatActivity {
                 Integer n = num;
                 switch (n) {
                     case CLEAR:
-
+                        calculate.clear();
                         break;
                     case DELETE:
-
+                        calculate.delete();
                         break;
                     case EQUALS:
+                        calculate.equals();
+                        break;
+                    case RADICAL:
+                        calculate.radical();
+                        break;
+                    case PERCENT:
+                        calculate.percent();
+                        break;
+                    case DECIMAL:
+                        calculate.decimal();
+                        break;
+                    case PLUS:
+                        calculate.arithmetic(PLUS);
+                        break;
+                    case MINUS:
+                        calculate.arithmetic(MINUS);
+                        break;
+                    case MUTIPLY:
+                        calculate.arithmetic(MUTIPLY);
+                        break;
+                    case DIVIDE:
+                        calculate.arithmetic(DIVIDE);
+                        break;
+                    default:
+                        calculate.appendNum(n);
 
 
                 }
