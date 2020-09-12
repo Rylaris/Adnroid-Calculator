@@ -138,7 +138,7 @@ public class Calculate {
         if (formula.isEmpty()) {
             return "";
         }
-        if (answer.charAt(answer.length() - 1) == '0' && answer.charAt(answer.length() - 2) == '.') {
+        if (answer.length() > 2 && answer.charAt(answer.length() - 1) == '0' && answer.charAt(answer.length() - 2) == '.') {
             return answer.substring(0, answer.length() - 2);
         } else {
             return answer;
