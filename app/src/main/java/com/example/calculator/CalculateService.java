@@ -13,7 +13,8 @@ class CalculateService {
     private Stack<Double> optr, opnd;
     private String arithmetic;
     private double result = 0;
-    private int[][] operatorRelationship = {{'+', 3, 2},
+    private int[][] operatorRelationship = {
+            {'+', 3, 2},
             {'-', 3, 2},
             {'*', 5, 4},
             {'/', 5, 4},
@@ -147,19 +148,19 @@ class CalculateService {
         } else if (getOperatorRelationship(operatorOne, 1) >
                 getOperatorRelationship(operatorTwo, 2)) {
             return 1;
-        } else
+        } else {
             return 2;
+        }
     }
 
     /**
      * 获取操作符的优先关系值
      *
      * @param operator 操作符
-     * @param order 操作符位置，1为栈端，2为扫描端
+     * @param order    操作符位置，1为栈端，2为扫描端
      * @return 操作符优先关系值
      */
     private int getOperatorRelationship(int operator, int order) {
-        // 使用嵌套foreach循环遍历优先关系值数组，查找到匹配的运算符，同时返回对应端的优先关系值
         for (int[] i : operatorRelationship) {
             for (int j : i) {
                 if (j == operator) {
@@ -167,7 +168,6 @@ class CalculateService {
                 }
             }
         }
-        // 为避免在judgeOperatorRelationship方法中产生空指针异常，此处不返回null值
         return -1;
     }
 

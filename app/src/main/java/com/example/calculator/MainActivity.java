@@ -3,11 +3,9 @@ package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import static com.example.calculator.ButtonState.*;
 
@@ -76,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
         setOnClickListener(clearButton, CLEAR);
     }
 
+    /**
+     * 为每个按钮绑定对应的事件
+     *
+     * @param button 需要绑定事件的按钮
+     * @param num 按钮的ID，对于数字按钮ID即为按钮代表的数字，
+     *            对于其他按钮，使用ButtonState中对应定义的常量作为ID
+     */
     private void setOnClickListener(final Button button, final int num) {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,8 +121,9 @@ public class MainActivity extends AppCompatActivity {
                         calculate.appendNum(n);
                 }
                 answerText.setText(calculate.getAnswer());
-                formulaText.setText(calculate.toString());
-//                Toast.makeText(MainActivity.this, n.toString(), Toast.LENGTH_LONG).show();
+                formulaText.setText(calculate.toString()
+                        .replace('/', '÷')
+                        .replace('*', '×'));
             }
         });
     }

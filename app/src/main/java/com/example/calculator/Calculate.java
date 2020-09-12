@@ -1,6 +1,7 @@
 package com.example.calculator;
 
-import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -21,6 +22,7 @@ public class Calculate {
         canDecimal = true;
         service = new CalculateService("");
         prevButton = ButtonState.NULL;
+        Map<Integer, String> map = new HashMap<>();
     }
 
     /**
