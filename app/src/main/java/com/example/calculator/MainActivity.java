@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton,
             sevenButton, eightButton, nineButton, decimalButton, plusButton, minusButton,
             mutiplyButton, divideButton, equalsButton, percentButton, radicalButton, deleteButton,
-            clearButton, fxButton;
+            clearButton, fxButton, tranButton;
 
     Calculate calculate = new Calculate();
 
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private void initAllComponents() {
         fxButton = findViewById(R.id.fx_button);
         setOnClickListener(fxButton, FX);
+        tranButton = findViewById(R.id.tran_button);
+        setOnClickListener(tranButton, TRAN);
         formulaText = findViewById(R.id.formula_text);
         answerText = findViewById(R.id.answer_text);
         decimalButton = findViewById(R.id.decimal_button);
@@ -93,8 +95,12 @@ public class MainActivity extends AppCompatActivity {
                 Integer n = num;
                 switch (n) {
                     case FX:
-                        Intent intent = new Intent(MainActivity.this, FunctionActivity.class);
-                        startActivity(intent);
+                        Intent intent1 = new Intent(MainActivity.this, FunctionActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case TRAN:
+                        Intent intent2 = new Intent(MainActivity.this, TranActivity.class);
+                        startActivity(intent2);
                         break;
                     case CLEAR:
                         calculate.clear();

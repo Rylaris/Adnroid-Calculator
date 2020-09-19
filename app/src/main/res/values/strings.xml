@@ -23,4 +23,12 @@
     <string name="sin">sin</string>
     <string name="cos">cos</string>
     <string name="title_activity_function">FunctionActivity</string>
+    <string name="title_activity_tran">TranActivity</string>
+    <string name="km">km</string>
+    <string name="m">m</string>
+    <string name="cm">cm</string>
+    <string name="mm">mm</string>
+    <string name="m2">立方米</string>
+    <string name="dm2">立方分米</string>
+    <string name="cm2">立方厘米</string>
 </resources>
