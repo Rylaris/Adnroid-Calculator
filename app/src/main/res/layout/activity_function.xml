@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="50dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="74dp"
+            android:layout_height="45dp"
+            android:text="@string/sin"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/sinValue_text"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/sinResult_text"
+            android:gravity="center"
+            android:layout_width="36dp"
+            android:layout_height="45dp"
+            android:text="=0"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/sin_button"
+            android:text="计算"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="50dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="74dp"
+            android:layout_height="45dp"
+            android:text="@string/cos"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/cosValue_text"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/cosResult_text"
+            android:gravity="center"
+            android:layout_width="36dp"
+            android:layout_height="45dp"
+            android:text="=0"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/cos_button"
+            android:text="计算"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textAllCaps="false"
+            android:textSize="30sp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -20,4 +20,7 @@
     <string name="zero">0</string>
     <string name="decimal">.</string>
     <string name="equals">=</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="title_activity_function">FunctionActivity</string>
 </resources>

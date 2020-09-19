@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/grid_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,9 +18,21 @@
         android:textColor="#000000"
         android:hint="" />
 
+    <Button
+        android:id="@+id/fx_button"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:background="@android:color/transparent"
+        android:text="fx"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/answer_text"
-        android:layout_columnSpan="4"
+        android:layout_columnSpan="3"
         android:layout_gravity="end"
         android:layout_margin="10dp"
         android:layout_height="wrap_content"
@@ -34,6 +46,7 @@
         android:layout_columnWeight="1"
         android:background="@android:color/transparent"
         android:text="@string/clear"
+        android:textAllCaps="false"
         android:textSize="30sp" />
 
     <Button
@@ -43,6 +56,7 @@
         android:layout_columnWeight="1"
         android:background="@android:color/transparent"
         android:text="@string/delete"
+        android:textAllCaps="false"
         android:textSize="30sp" />
 
     <Button
@@ -52,12 +66,14 @@
         android:layout_columnWeight="1"
         android:background="@android:color/transparent"
         android:text="@string/percent"
+        android:textAllCaps="false"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/divide_button"
         android:layout_gravity="bottom"
         android:text="@string/divide"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -71,11 +87,13 @@
         android:layout_columnWeight="1"
         android:background="@android:color/transparent"
         android:text="@string/seven"
+        android:textAllCaps="false"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/eight_button"
         android:text="@string/eight"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -85,6 +103,7 @@
     <Button
         android:id="@+id/nine_button"
         android:text="@string/nine"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -94,6 +113,7 @@
     <Button
         android:id="@+id/multiply_button"
         android:text="@string/multiply"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -103,6 +123,7 @@
     <Button
         android:id="@+id/four_button"
         android:text="@string/four"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -112,6 +133,7 @@
     <Button
         android:id="@+id/five_button"
         android:text="@string/five"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -121,6 +143,7 @@
     <Button
         android:id="@+id/six_button"
         android:text="@string/six"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -130,6 +153,7 @@
     <Button
         android:id="@+id/minus_button"
         android:text="@string/minus"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -139,6 +163,7 @@
     <Button
         android:id="@+id/one_button"
         android:text="@string/one"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -148,6 +173,7 @@
     <Button
         android:id="@+id/two_button"
         android:text="@string/two"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -157,6 +183,7 @@
     <Button
         android:id="@+id/three_button"
         android:text="@string/three"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -166,6 +193,7 @@
     <Button
         android:id="@+id/plus_button"
         android:text="@string/plus"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -175,6 +203,7 @@
     <Button
         android:id="@+id/radical_button"
         android:text="@string/radical"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -184,6 +213,7 @@
     <Button
         android:id="@+id/zero_button"
         android:text="@string/zero"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -193,6 +223,7 @@
     <Button
         android:id="@+id/decimal_button"
         android:text="@string/decimal"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -202,6 +233,7 @@
     <Button
         android:id="@+id/equals_button"
         android:text="@string/equals"
+        android:textAllCaps="false"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:textSize="30sp"
@@ -209,3 +241,4 @@
         android:layout_columnWeight="1"/>
 
 </GridLayout>
+

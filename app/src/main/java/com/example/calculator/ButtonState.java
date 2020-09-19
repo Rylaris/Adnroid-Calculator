@@ -15,4 +15,5 @@ public class ButtonState {
     public static final int RADICAL = 34;
     public static final int DECIMAL = -2;
     public static final int NULL = 404;
+    public static final int FX = 2453;
 }

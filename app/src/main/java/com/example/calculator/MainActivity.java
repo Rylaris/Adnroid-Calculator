@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton,
             sevenButton, eightButton, nineButton, decimalButton, plusButton, minusButton,
             mutiplyButton, divideButton, equalsButton, percentButton, radicalButton, deleteButton,
-            clearButton;
+            clearButton, fxButton;
 
     Calculate calculate = new Calculate();
 
@@ -24,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+//        setSupportActionBar(myToolbar);
         initAllComponents();
     }
 
     private void initAllComponents() {
+        fxButton = findViewById(R.id.fx_button);
+        setOnClickListener(fxButton, FX);
         formulaText = findViewById(R.id.formula_text);
         answerText = findViewById(R.id.answer_text);
         decimalButton = findViewById(R.id.decimal_button);
@@ -87,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Integer n = num;
                 switch (n) {
+                    case FX:
+                        Intent intent = new Intent(MainActivity.this, FunctionActivity.class);
+                        startActivity(intent);
+                        break;
                     case CLEAR:
                         calculate.clear();
                         break;
@@ -121,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
                         calculate.appendNum(n);
                 }
                 answerText.setText(calculate.getAnswer());
-                formulaText.setText(calculate.toString()
+                formulaText.setText(calculate
+                        .toString()
                         .replace('/', '÷')
                         .replace('*', '×'));
             }
