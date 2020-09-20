@@ -45,6 +45,9 @@ class CalculateService {
      * @return 浮点格式的计算结果
      */
     Double getResult() {
+        if (arithmetic.equals("=")) {
+            return 0.0;
+        }
         // countDecimalPlaces：记录小数点的位数，数值代表读取的数字需要缩小的倍数
         int countDecimalPlaces = 1;
         // passDecimalPoint：记录是否读取到小数点

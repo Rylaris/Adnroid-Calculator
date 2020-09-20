@@ -189,6 +189,9 @@ public class Calculate {
      */
     private String formulaToString() {
         Stack<Character> temp = (Stack<Character>) formula.clone();
+        if (temp.isEmpty()) {
+            return "";
+        }
         while (temp.peek() > '9' || temp.peek() < '0') {
             temp.pop();
         }
